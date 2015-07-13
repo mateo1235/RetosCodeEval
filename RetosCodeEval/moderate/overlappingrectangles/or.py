@@ -1,0 +1,16 @@
+import sys
+test_cases = open(sys.argv[1], 'r')
+for test in test_cases:
+    ns = test.strip('\n').split(',')
+    f1=map(int,ns[:4])
+    f2=map(int,ns[4:8])
+    a=sorted([f1[0],f1[2]])
+    b=sorted([f1[1],f1[3]])
+    c=sorted([f2[0],f2[2]])
+    d=sorted([f2[1],f2[3]])
+    fax = range(a[0],a[1]+1)
+    fay = range(b[0],b[1]+1)
+    fbx = range(c[0],c[1]+1)
+    fby = range(d[0],d[1]+1)
+    print bool(len(list(set(fax) & set(fbx))) != 0 and len(list(set(fay) & set(fby))) != 0)
+test_cases.close()
