@@ -10,7 +10,7 @@ for test in test_cases:
         elif s[i].isupper():            
             u=u+1.0
     t=u+l
-    rl=round((l/t)*100,2)
-    ru=round((u/t)*100,2)
+    rl="%.2f" % round((l/t)*100,2)
+    ru="%.2f" % round((u/t)*100,2)
     print "lowercase: "+str(rl)+" uppercase: "+str(ru)
 test_cases.close()
